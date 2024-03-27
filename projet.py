@@ -23,13 +23,10 @@ def menu():
 def conversion_decimal_vers_binaire():
     """Effectue la conversion de décimal vers binaire"""
     decimal = input("Entrez un nombre décimal entre -128 et 127 : ")
-    if decimal.isdigit():
-        decimal = int(decimal)
-        if -128 <= decimal <= 127:
-            binaire = decimal_vers_binaire(decimal)
-            print("Le nombre binaire est :", binaire)
-        else:
-            print(" Le nombre doit être compris entre -128 et 127.")
+    decimal = int(decimal)
+    if -128 <= decimal <= 127:
+        binaire = decimal_vers_binaire(decimal)
+        print("Le nombre binaire est :", binaire)
     else:
         print(" Veuillez entrer un nombre décimal valide.")
 
@@ -46,4 +43,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
